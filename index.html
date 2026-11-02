@@ -129,7 +129,8 @@ figcaption { font-family: var(--font-mono); font-size: .74rem; color: var(--mute
 .proj .meta { font-family: var(--font-mono); font-size: .75rem; color: var(--muted); margin-bottom: 8px; letter-spacing: .02em; }
 .status { display: inline-block; font-size: .78rem; font-weight: 600; padding: 2px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; }
 .status.done { background: var(--df-soft); color: var(--df); }
-.minor { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.minor { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+@media (max-width: 560px) { .minor { grid-template-columns: minmax(0, 1fr); } }
 .minor article { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
 .minor h3 { font-size: 1.08rem; }
 .minor p { font-size: .93rem; color: var(--muted); margin: 0; }
@@ -322,6 +323,10 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wr
           <article>
             <h3>Phase contrast ↔ dark-field translation</h3>
             <p>An attention-based network that predicts one label-free contrast from the other, so a single microscope can supply both views.</p>
+          </article>
+          <article>
+            <h3>On-chip microscopy</h3>
+            <p>Image reconstruction for lensless on-chip microscopy with microlens arrays, aiming at compact, low-cost imaging.</p>
           </article>
           <article>
             <h3>Low-cost and point-of-care imaging</h3>
